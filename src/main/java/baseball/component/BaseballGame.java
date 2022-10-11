@@ -34,8 +34,9 @@ public class BaseballGame {
             referee.playerTurn(playerNumber);
 
             String result = generateResultString(referee.getBalls(), referee.getStrikes());
+            System.out.println(result);
 
-        } while(referee.getStrikes() == 3);
+        } while(referee.getStrikes() != 3);
         System.out.println("3개의 숫자를 모두 맞히셨습니! 게임 종료");
     }
 
