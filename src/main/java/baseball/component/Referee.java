@@ -24,6 +24,17 @@ public class Referee {
        strikes = count;
     }
 
+    private void verifyBalls(){
+        int count = 0;
+        for(int i=0; i<3; i++){
+            if(playerNumbers[i] == computerNumbers[(1+i)%3] ||
+                    playerNumbers[i] == computerNumbers[(2+i)%3]){
+                count++;
+            }
+        }
+        balls = count;
+    }
+
     public void setComputerNumbers(int[] computerNumbers1s){
         this.computerNumbers = computerNumbers;
     }
