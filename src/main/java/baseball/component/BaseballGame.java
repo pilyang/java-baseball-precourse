@@ -7,18 +7,17 @@ import java.util.List;
 
 public class BaseballGame {
 
-    private int[] computerNumber;
-    private int[] playerNumber;
+    private Referee referee;
 
     public BaseballGame(){
-        computerNumber = new int[3];
+        referee = new Referee();
     }
 
     public void startGame(){
 
     }
 
-    private void generateComputerNumber(){
+    private int[] generateComputerNumber(){
         List<Integer> numbers = new ArrayList<>();
         for(int i=0; i<3; i++){
             int number = 0;
@@ -27,7 +26,7 @@ public class BaseballGame {
             } while(numbers.contains(number));
             numbers.add(number);
         }
-        computerNumber = numbers.stream().mapToInt(Integer::intValue).toArray();
+        return numbers.stream().mapToInt(Integer::intValue).toArray();
     }
 
 }
