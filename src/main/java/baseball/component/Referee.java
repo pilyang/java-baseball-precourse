@@ -37,7 +37,7 @@ public class Referee {
         balls = count;
     }
 
-    public void setComputerNumbers(int[] computerNumbers1s){
+    public void setComputerNumbers(int[] computerNumbers){
         this.computerNumbers = computerNumbers;
     }
 
