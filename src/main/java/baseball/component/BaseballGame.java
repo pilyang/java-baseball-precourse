@@ -75,6 +75,11 @@ public class BaseballGame {
     }
 
     private int[]  convertPlayerInput(String playerInput){
+
+        if(!playerInput.matches("\\d{3}")){
+            throw new IllegalArgumentException("please input 3 digit number");
+       }
+
         int[] numbers = new int[3];
         for(int i=0; i<3; i++){
             numbers[i] = Character.getNumericValue(playerInput.charAt(i));
