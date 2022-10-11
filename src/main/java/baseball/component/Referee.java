@@ -12,6 +12,8 @@ public class Referee {
 
     public void playerTurn(int[] playerNumbers){
         setPlayerNumber(playerNumbers);
+        verifyStrikes();
+        verifyBalls();
     }
 
     private void verifyStrikes(){
@@ -43,5 +45,11 @@ public class Referee {
         this.playerNumbers = playerNumbers;
     }
 
+    public int getStrikes() {
+        return strikes;
+    }
 
+    public int getBalls() {
+        return balls;
+    }
 }
